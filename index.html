@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind 10</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/flexboxes.css">
+  <link rel="stylesheet" href="assets/nav.css">
+  <link rel="stylesheet" href="assets/typography.css">
+  
+  <link href="dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-btn" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <button class="search-icon-btn" id="searchIconBtn" aria-label="Open search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+        </button>
+        <div class="search-bar" id="searchBar">
+            <input type="text" id="searchInput" placeholder="Zoek week..." class="search-input">
+            <button class="search-btn" id="searchBtn">Go</button>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <ul class="vertical-buttons">
+            <li><a href="index.html">Homepage</a></li>
+            <li><a href="page1.html">Week 1</a></li>
+            <li><a href="page2.html">Week 2</a></li>
+            <li><a href="page3.html">Week 3</a></li>
+            <li><a href="page4.html">Week 4</a></li>
+            <li><a href="page5.html">Week 5</a></li>
+            <li><a href="page6.html">Week 6</a></li>
+            <li><a href="page7.html">Week 7</a></li>
+            <li><a href="page8.html">Week 8</a></li>
+            <li><a href="page9.html">Week 9</a></li>
+            <li><a href="page10.html">Week 10</a></li>
+            <li class="sidebar-contact"><a href="contact.html" class="contact-btn">Contact</a></li>
+        </ul>
+        <!-- Profile icons (bottom of sidebar) -->
+        <div class="sidebar-profiles" aria-label="Profiles">
+            <a href="#profile1" class="profile-link" title="Profiel 1">
+                <span class="profile-avatar">JS</span>
+            </a>
+            <a href="#profile2" class="profile-link" title="Profiel 2">
+                <span class="profile-avatar">AM</span>
+            </a>
+            <a href="#profile3" class="profile-link" title="Profiel 3">
+                <span class="profile-avatar">LP</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <h1>Lost in Tra(i)nslation</h1>
+            <div class="hero-byline">By Jess Schoenmakers — GDM2</div>
+            <!-- Downloadable PDF link (place your PDF at assets/Lost-in-Translation.pdf) -->
+            <p style="margin-top:12px;">
+                <!-- Download the process document PDF located in assets/ -->
+                <a class="cta-button" href="assets/2526_PRTT_SchoenmakersJ_Processdocument.pdf" download rel="noopener noreferrer">Download procesdocument (PDF)</a>
+            </p>
+        </section>
+
+        <!-- Homepage intro using week-report styles so it matches the week pages -->
+        <section class="week-report home-intro">
+            <div class="week-report-grid two-column">
+                <div class="report-text">
+                    <h3>Homepage</h3>
+                    <p>Deze opdracht rond de treinborden heeft als doel het treinsysteem duidelijker en gebruiksvriendelijker te maken. De borden moeten het systeem beter verduidelijken, zodat iedereen het gemakkelijk kan begrijpen. Daarnaast is het belangrijk dat ook mensen die geen Nederlands spreken de informatie kunnen begrijpen. Daarom wordt er op de borden gebruikgemaakt van meerdere talen.</p>
+                </div>
+                <div class="report-text lift-up">
+                    <h3>Vier borden</h3>
+                    <p>We kregen de opdracht om vier verschillende borden te ontwerpen: een vertrekbordscherm, een perroninformatiescherm, een passagiersinformatie- en wegwijsscherm, en een mobiel scherm.</p>
+                    <p>Onder in het vak een link: <a href="https://www.figma.com/design/595AzZqkFfNtHth78HEBjG/Untitled?node-id=0-1&p=f&t=d8emQF7XgZaxNYqy-0" target="_blank" rel="noopener noreferrer">Figma ontwerp</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <!-- Train (two-carriage side-view, symmetric carriages; lowered so carriages sit just above wheels) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" aria-hidden="true" role="img">
+                            <!-- Carriage dimensions (identical) -->
+                            <!-- Left carriage (lowered) -->
+                            <rect x="20" y="56" width="300" height="88" rx="20" fill="currentColor" />
+                            <!-- Right carriage (identical, lowered) -->
+                            <rect x="320" y="56" width="300" height="88" rx="20" fill="currentColor" />
+
+                            <!-- Windows left carriage (center aligned with wheels) -->
+                            <rect x="67" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="142" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="217" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Windows right carriage (center aligned with wheels) -->
+                            <rect x="367" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="442" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="517" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Door placeholder (center between carriages, moved down) -->
+                            <rect x="310" y="76" width="12" height="52" rx="4" fill="#ffffff" opacity="0.0" />
+
+                            <!-- Wheels: three per carriage (slightly adjusted vertically) -->
+                            <!-- Left carriage wheels (evenly spaced under carriage) -->
+                            <circle cx="95" cy="162" r="14" fill="currentColor" />
+                            <circle cx="170" cy="162" r="14" fill="currentColor" />
+                            <circle cx="245" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Right carriage wheels (evenly spaced under carriage) -->
+                            <circle cx="395" cy="162" r="14" fill="currentColor" />
+                            <circle cx="470" cy="162" r="14" fill="currentColor" />
+                            <circle cx="545" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Track line -->
+                            <rect x="0" y="188" width="640" height="6" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Week 1</h3>
+                    <p><a href="page1.html" class="open-week-picker" data-weeks="1">Ga naar Week 1</a></p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <!-- Train (two-carriage side-view, symmetric carriages; larger) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" aria-hidden="true" role="img">
+                            <!-- Carriage dimensions (identical, lowered to match first icon) -->
+                            <!-- Left carriage -->
+                            <rect x="20" y="56" width="300" height="88" rx="20" fill="currentColor" />
+                            <!-- Right carriage (identical, placed to the right) -->
+                            <rect x="320" y="56" width="300" height="88" rx="20" fill="currentColor" />
+
+                            <!-- Windows left carriage (center aligned with wheels) -->
+                            <rect x="67" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="142" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="217" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Windows right carriage (center aligned with wheels) -->
+                            <rect x="367" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="442" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="517" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Door placeholder (center between carriages) -->
+                            <rect x="310" y="76" width="12" height="52" rx="4" fill="#ffffff" opacity="0.0" />
+
+                            <!-- Wheels: three per carriage (evenly spaced under carriage) -->
+                            <!-- Left carriage wheels -->
+                            <circle cx="95" cy="162" r="14" fill="currentColor" />
+                            <circle cx="170" cy="162" r="14" fill="currentColor" />
+                            <circle cx="245" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Right carriage wheels -->
+                            <circle cx="395" cy="162" r="14" fill="currentColor" />
+                            <circle cx="470" cy="162" r="14" fill="currentColor" />
+                            <circle cx="545" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Track line -->
+                            <rect x="0" y="188" width="640" height="6" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Weeks 2-5</h3>
+                    <p><a href="page2.html" class="open-week-picker" data-weeks="2-5">Verken de volgende weken</a></p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <!-- Train (two-carriage side-view, symmetric carriages; larger) -->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" aria-hidden="true" role="img">
+                            <!-- Carriage dimensions (identical, lowered to match first icon) -->
+                            <!-- Left carriage -->
+                            <rect x="20" y="56" width="300" height="88" rx="20" fill="currentColor" />
+                            <!-- Right carriage (identical, placed to the right) -->
+                            <rect x="320" y="56" width="300" height="88" rx="20" fill="currentColor" />
+
+                            <!-- Windows left carriage (center aligned with wheels) -->
+                            <rect x="67" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="142" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="217" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Windows right carriage (center aligned with wheels) -->
+                            <rect x="367" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="442" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+                            <rect x="517" y="72" width="56" height="40" rx="8" fill="#ffffff" />
+
+                            <!-- Door placeholder (center between carriages) -->
+                            <rect x="310" y="76" width="12" height="52" rx="4" fill="#ffffff" opacity="0.0" />
+
+                            <!-- Wheels: three per carriage (evenly spaced under carriage) -->
+                            <!-- Left carriage wheels -->
+                            <circle cx="95" cy="162" r="14" fill="currentColor" />
+                            <circle cx="170" cy="162" r="14" fill="currentColor" />
+                            <circle cx="245" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Right carriage wheels -->
+                            <circle cx="395" cy="162" r="14" fill="currentColor" />
+                            <circle cx="470" cy="162" r="14" fill="currentColor" />
+                            <circle cx="545" cy="162" r="14" fill="currentColor" />
+
+                            <!-- Track line -->
+                            <rect x="0" y="188" width="640" height="6" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3>Weeks 6-10</h3>
+                    <p><a href="page6.html" class="open-week-picker" data-weeks="6-10">Ontdek het finale deel</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+        </section>
+
+        <section class="cta-section">
+            <h2>Contact</h2>
+            <p>Heb je vragen of wil je samenwerken? Neem contact met ons op.</p>
+            <a href="contact.html" class="cta-button">Contactpagina</a>
+        </section>
+    </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const sidebar = document.getElementById('sidebar');
+        const searchIconBtn = document.getElementById('searchIconBtn');
+        const searchBar = document.getElementById('searchBar');
+        const searchInput = document.getElementById('searchInput');
+        const searchBtn = document.getElementById('searchBtn');
+
+        // Week mapping
+        const weekMap = {
+            'week 1': 'page1.html',
+                '1': 'page1.html',
+            'week 2': 'page2.html',
+            '2': 'page2.html',
+            'week 3': 'page3.html',
+            '3': 'page3.html',
+            'week 4': 'page4.html',
+            '4': 'page4.html',
+            'week 5': 'page5.html',
+            '5': 'page5.html',
+            'week 6': 'page6.html',
+            '6': 'page6.html',
+            'week 7': 'page7.html',
+            '7': 'page7.html',
+            'week 8': 'page8.html',
+            '8': 'page8.html',
+            'week 9': 'page9.html',
+            '9': 'page9.html',
+            'week 10': 'page10.html',
+            '10': 'page10.html'
+            ,
+            'contact': 'contact.html',
+            'contactpagina': 'contact.html'
+        };
+
+        // Toggle search bar on icon click
+        searchIconBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            searchBar.classList.toggle('active');
+            if (searchBar.classList.contains('active')) {
+                searchInput.focus();
+            }
+        });
+
+        // Close search bar when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!searchBar.contains(event.target) && !searchIconBtn.contains(event.target)) {
+                searchBar.classList.remove('active');
+            }
+        });
+
+        // Toggle sidebar on hamburger button click
+        hamburgerBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            hamburgerBtn.classList.toggle('active');
+        });
+
+        // Close sidebar when a link is clicked
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                sidebar.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            });
+        });
+
+        // Close sidebar when clicking outside of it
+        document.addEventListener('click', function(event) {
+            if (!sidebar.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+                sidebar.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
+            }
+        });
+
+        // Search functionality
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            if (query && weekMap[query]) {
+                window.location.href = weekMap[query];
+            } else if (query) {
+                alert('Week niet gevonden. Probeer "week 1" tot "week 10" of gewoon "1" tot "10"');
+            }
+        }
+
+        // Week picker modal functionality (modal skeleton created once, week list populated per card)
+        const weekPickerModal = document.createElement('div');
+        weekPickerModal.id = 'weekPickerModal';
+        weekPickerModal.className = 'modal-overlay';
+        weekPickerModal.innerHTML = `
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="weekPickerTitle">
+                <button class="modal-close" aria-label="Sluit">×</button>
+                <h3 id="weekPickerTitle">Kies een week</h3>
+                <p class="modal-sub">Selecteer een week om naar die pagina te gaan</p>
+                <div class="week-list"></div>
+            </div>
+        `;
+        document.body.appendChild(weekPickerModal);
+
+        const openWeekBtns = document.querySelectorAll('.open-week-picker');
+        openWeekBtns.forEach(btn => {
+            btn.addEventListener('click', function(e){
+                e.preventDefault();
+                const range = btn.dataset.weeks || '1-10';
+                openWeekPicker(range);
+            });
+        });
+
+        function buildWeekLinks(range){
+            const container = weekPickerModal.querySelector('.week-list');
+            let html = '';
+            if(!range) range = '1-10';
+            if(range.indexOf('-') > -1){
+                const [startStr,endStr] = range.split('-');
+                const start = parseInt(startStr,10);
+                const end = parseInt(endStr,10);
+                for(let i=start;i<=end;i++){
+                    html += `<a href="page${i}.html" class="week-link">Week ${i}</a>`;
+                }
+                // If this range ends with 10 (e.g., 6-10), mark container so we can center the last item
+                if(end === 10){
+                    container.classList.add('center-last');
+                } else {
+                    container.classList.remove('center-last');
+                }
+            } else {
+                const i = parseInt(range,10);
+                if(!isNaN(i)) html = `<a href="page${i}.html" class="week-link">Week ${i}</a>`;
+                container.classList.remove('center-last');
+            }
+            container.innerHTML = html;
+            // If only a single week is present, add a class to center it
+            const links = container.querySelectorAll('.week-link');
+            if(links.length === 1){
+                container.classList.add('single');
+                links[0].classList.add('single');
+            } else {
+                container.classList.remove('single');
+                links.forEach(l => l.classList.remove('single'));
+            }
+        }
+
+        function openWeekPicker(range){
+            buildWeekLinks(range);
+            weekPickerModal.classList.add('active');
+            weekPickerModal.style.display = 'flex';
+            const first = weekPickerModal.querySelector('.week-link');
+            if(first) first.focus();
+        }
+
+        function closeWeekPicker(){
+            weekPickerModal.classList.remove('active');
+            weekPickerModal.style.display = 'none';
+        }
+
+        // Close events
+        weekPickerModal.addEventListener('click', function(e){
+            if(e.target === weekPickerModal) closeWeekPicker();
+        });
+        weekPickerModal.querySelector('.modal-close').addEventListener('click', closeWeekPicker);
+
+        // Keyboard: Esc to close
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Escape' && weekPickerModal.classList.contains('active')){
+                closeWeekPicker();
+            }
+        });
+
+        // Delegate click on week links to navigate
+        weekPickerModal.addEventListener('click', function(e){
+            const a = e.target.closest('.week-link');
+            if(a){
+                e.preventDefault();
+                const href = a.getAttribute('href');
+                closeWeekPicker();
+                setTimeout(()=> window.location.href = href, 120);
+            }
+        });
+    </script>
+</body>
+</html>
